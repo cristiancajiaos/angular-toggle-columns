@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  thirdInput = false;
+  
   constructor() { }
 
   ngOnInit(): void {

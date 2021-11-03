@@ -1,3 +1,22 @@
-<p>layout works!</p>
+<div class="form-group">
+  <ui-switch [(ngModel)]="thirdInput"></ui-switch>
+  <label>Toggle Third Input</label>
+</div>
 
-<ui-switch></ui-switch>
+<hr/>
+
+<div class="row">
+  <div class="col-12" [ngClass]="{'col-lg-6':!thirdInput, 'col-lg-4':thirdInput}">
+    <input class="form-control" placeholder="Input 1"/>
+  </div>
+  <div class="col-12" [ngClass]="{'col-lg-6':!thirdInput, 'col-lg-4':thirdInput}">
+    <input class="form-control" placeholder="Input 2" />
+  </div>
+  <div class="col-12" [ngClass]="{'d-none':!thirdInput, 'col-lg-4':thirdInput}">
+    <input class="form-control" placeholder="Input 3" />
+  </div>
+</div>
+
+<hr/>
+
+<p>Third input?: {{thirdInput}}</p>
